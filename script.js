@@ -57,17 +57,19 @@ let full_name = document.querySelector('#full-name'),
     arr = []
 
 if(submit){
-    submit.addEventListener('click',()=>{
+    submit.addEventListener('click',(event)=>{
+
+        event.preventDefault();
 
         let error = document.querySelectorAll('small');
 
-        if(full_name.value=='') return error[0].style.display='block';
-        if(email.value=="" || !email.value.includes('@gmail.com')) return error[1].style.display='block';
-        if(pass.value=='' || pass.value !== cnpass.value) return error[2].style.display='block';
-        if(gender == '') return error[3].style.display='block';
-        if(phone.value=='') return error[4].style.display='block';
-        if(gender.value=='')return error[5].style.display='block';
-        if(address.value=='') return error[6].style.display='block';
+        if(full_name.value=='') return error[0].style.display='block', window.scrollTo(error[0]);
+        if(email.value=="" || !email.value.includes('@gmail.com')) return error[1].style.display='block', window.scrollTo(error[1]);
+        if(pass.value=='' || pass.value !== cnpass.value) return error[2].style.display='block', window.scrollTo(error[2]);
+        if(gender == '') return error[3].style.display='block', window.scrollTo(error[3]);
+        if(phone.value=='') return error[4].style.display='block', window.scrollTo(error[4]);
+        if(gender.value=='')return error[5].style.display='block', window.scrollTo(error[5]);
+        if(address.value=='') return error[6].style.display='block', window.scrollTo(error[6]);
 
         error.forEach(n=> n.style.display='none');
 

@@ -5,6 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 .container {
     min-height: 100vh;
     display: flex;
