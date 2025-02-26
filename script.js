@@ -69,7 +69,7 @@ if(submit){
         if(gender == '') return error[3].style.display='block';
         if(phone.value=='') return error[4].style.display='block';
         if(gender.value=='')return error[5].style.display='block';
-        if(address.value=='') return error[6].style.display='block';
+        if(address.value=='') return error[6].style.display='block' ;
 
         error.forEach(n=> n.style.display='none');
 
