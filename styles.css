@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -192,4 +193,26 @@ small,span{
   color: red;
   display: none;
   font-size: .7rem;
+}
+
+label{
+  display: flex;
+  gap: .5rem;
+}
+
+color{
+  color: red;
+}
+
+@keyframes error-blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.error {
+  display: block;
+  color: red; 
+  font-weight: bold;
+  animation: error-blink 1s infinite;
 }
